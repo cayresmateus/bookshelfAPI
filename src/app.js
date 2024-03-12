@@ -10,11 +10,10 @@ db.once("open", () => {
 });
 
 const app = express();
-app.use(express.json());
 routes(app);
-
+app.use(express.json());
 app.use(manipulador404);
-
 app.use(manipuladorDeErros);
+
 
 export default app;
